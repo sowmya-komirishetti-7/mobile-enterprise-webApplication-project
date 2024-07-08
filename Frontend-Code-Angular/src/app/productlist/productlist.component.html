@@ -1,0 +1,74 @@
+<header>
+    <div class="navbar navbar-dark shadow-sm color">
+        <div class="navbar-brand align-item-center d-flex">
+            <!-- <strong style="font-size: 30px;">iCoNnEcT</strong> -->
+            <!-- <div class="form-group"> -->
+                   
+                    <button  class="btn btn-sm" routerLink="/userpage">
+                        <span class="glyphicon glyphicon-log-out" style="font-size: xx-large;">Back</span>
+                    </button>
+                
+                        <img src="../../assets/Images/home.jpg" width="50" height="50"> &nbsp;
+                        <input type="text" [(ngModel)]="searchText" 
+                        class="form-control" placeholder="Search product name" />
+                <!-- <input class="form-control me-sm-2 form-control-lg" type="search"  placeholder="Search">    -->
+            
+            <!-- </div>  -->
+        </div>
+            
+             
+        <div class="ms-auto btn-lg">
+          
+        <button >
+            <div>
+                <span routerLink="register" class="nav-link active" >Welcome, {{ uName}}</span>
+         </div>
+        </button>
+        <button   routerLink="/addtocart">
+            <div>
+           <img src="../assets/Images/cart.webp" height="35" weight="35"> 
+         </div>
+        </button>
+        <button   routerLink="/wishlist">
+            <div>
+           <img src="../assets/Images/wishlist.jpg" height="35" weight="35"> 
+         </div>
+        </button>
+        <button (click)="onLogout()"> 
+            <div>
+           <img src="../assets/Images/logout.jpg" height="35" weight="35"> 
+         </div>
+        </button>
+        <!-- <button  routerLink="/login">
+            <div>
+           <img src="../assets/Images/logout.jpg" height="35" weight="35"> 
+         </div>
+        </button> -->
+    </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let p of product | search:searchText">
+            <div class="card col-md-3 ">
+                <!-- <p>{{p.pId}}</p> -->
+                <img src="{{p.pImage}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{p.pName }} &nbsp; &nbsp; &nbsp; 
+                    <!-- <b   routerLink="/wishlist" class="bi bi-heart"> -->
+                         <i  class="far fa-heart float-right" (click)="wishlist(p)" ></i>  
+                        <!-- <i *ngIf="!addtowishlist" class="far fa-heart float-right" (click)="deletewishlist(p)" routerLink="wishlist"></i>
+                    <i *ngIf="addtowishlist" class="fas fa-heart float-right" (click)="wishlist(p)" routerLink="wishlist"></i> -->
+                    
+                     </h5>  
+                   
+                <p style="">{{p.pDesc}}</p>
+                
+                <p><strong>Price:</strong> {{p.pPrice | currency:"INR"}}</p>
+               
+                <p><strong>Available:</strong> {{p.pQuantity}}</p>
+                <button class="btn buttoncolor"  (click)="addtocart(p)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

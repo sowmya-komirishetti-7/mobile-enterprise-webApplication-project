@@ -1,0 +1,19 @@
+<form #addForm="ngForm" (ngSubmit)="addcategory(addForm.value)" class="add">
+    <!-- CategoryId:<input type="text" ngModel name="pcId" #pId="ngModel" required><br><br> -->
+    <div class="container text-center ">
+        <section class="vh-100 bg-image image"
+  style="background-image: url('../assets/Images/addcategorybackground.jpg');">
+  <div class="mask  h-100 ">
+ 
+    <h1><i>Add Mobile Category Here</i></h1><br><br>
+    <label class="form-label"><b>CategoryName:</b></label>
+    <input type="text" ngModel name="pcName" #pName="ngModel"  required class=" form-label form-control-lg"><br><br>
+    <input type="submit" value="addcategory" class="btn  btn-secondary btn-md ">
+  <br><br>
+  <div><u><i routerLink="/categorytable">  Back to category details</i> </u></div>
+</div>
+        </section>
+
+    
+</div>
+</form>

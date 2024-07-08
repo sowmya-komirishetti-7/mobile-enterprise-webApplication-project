@@ -1,0 +1,85 @@
+<header>
+    <div class="navbar navbar-dark shadow-sm color">
+        <div class="navbar-brand align-item-center d-flex">
+            <!-- <strong style="font-size: 30px;">iCoNnEcT</strong> -->
+            <button  class="btn btn-sm" routerLink="/productlist">
+                <span class="glyphicon glyphicon-log-out" style="font-size: xx-large;">Back</span>
+            </button>&nbsp;
+            <img src="../../assets/Images/home.jpg" width="50" height="50">
+            <div class="form-group">
+                <!-- <input class="form-control me-sm-2" type="search" placeholder="Search">
+                 -->
+            </div>
+            <!-- <span class="fas fa-search search-icon"></span> -->
+        </div>
+        <div class="ms-auto btn-lg">          
+            <!-- <button >
+                <div>
+            <img src="../assets/Images/user1.jpg" height="35" weight="35">
+            </div>
+            </button> -->
+            <!-- <button   routerLink="/addtocart">
+                <div>
+            <img src="../assets/Images/cart.webp" height="35" weight="35"> 
+            </div>
+            </button> -->
+            <button  >
+                <div>
+            <img src="../assets/Images/wishlist.jpg" height="35" weight="35"> 
+            </div>
+            </button> 
+        </div>
+    </div>
+</header>
+<ng-container *ngIf="true">
+    <div class="container">
+        <div clas="card-table">
+            <div class="card-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>ProductName</th>
+                            <th>ProductImage</th>
+                            <th>ProductDescription</th>
+                            <!-- <th>ProductPrice</th>
+                            <th>ProductQuantity</th> -->
+                            <th>Action</th>
+                        </tr>
+                    </thead>                
+                    <tbody >
+                    
+                        <ng-container *ngIf="productlist.length > 0">
+                            <tr *ngFor="let p of productlist;let i = index">
+                                <td>{{i+1}}</td> 
+                                <td >{{p?.product?.pName}}</td>
+                                <td><img src="{{p?.product?.pImage}}" height="100" width="100"></td>
+                                <td>{{p?.product?.pDesc}}</td>
+                                <!-- <td>{{p?.product?.pPrice}}</td>
+                                <td>{{p?.product?.pQuantity}}</td> -->
+                                <td>
+                                <button (click)="removeItem(p.wId)" class="btn btn-danger">Remove from wishlist</button>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>   
+</ng-container>
+<ng-container *ngIf="false">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="../assets/Images/emptycart.jpg" alt="">
+            <h4>Your cart is Empty!</h4>
+            <h6>Add item to it now</h6>
+            <button class="btn btn-primary" routerLink="/productlist" style="background-color: #9A616D;">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+

@@ -1,0 +1,27 @@
+/* .background{
+    background-image:  url(../assets/Images/mobilepic1.jpg);
+} */
+
+.background-img{
+    background-image: url("../../assets/Images/mobilepic.jpg");
+    background-repeat: round;
+    height: 865px;
+}
+.heading{
+    color: #f7bfe8;
+}
+.box{
+    width: 50%;
+    height: 40%;
+}
+.shadows{
+    box-shadow: 0 2rem 1rem ;
+    background-color: #d5cad2;
+}
+strong{
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 2rem 1rem #0000003d;
+}
+.color{
+    background-color:  #c083b0;
+  }

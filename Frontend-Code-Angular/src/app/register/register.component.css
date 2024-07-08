@@ -1,0 +1,114 @@
+.title{
+    text-align: center;
+    background-origin: padding-box;
+    background-color: aqua;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 65px ;
+    
+}
+.messege .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+}
+.messege .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    animation: buttons .3s linear;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .login-bg{
+    
+    width: 100%;
+    background-repeat: no-repeat;
+    height: calc(100vh - 122px);
+    background-size: cover;
+    background-position: center;
+}
+.success-msg{
+    color: white;
+    background-color: green;
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    position: absolute;
+    top: 150px;
+    left: calc(50vw - 150px);
+    z-index: 999;
+    text-align: center;
+}
+.messege{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.messege .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.messege .danger{
+    font-size: red;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+    }
+    .gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+    }
+    .color{
+        background-color:  #c083b0;
+     }
+  
+     .imgclass{
+        /* height: 50%;
+        width: 91%; */
+  
+        background-image: url('../../assets/Images/register.jpg');
+        width: 66%;
+        /* height: 50%; */
+     }

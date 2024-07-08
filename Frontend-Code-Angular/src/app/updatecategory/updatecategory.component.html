@@ -1,0 +1,23 @@
+
+    <div class="container text-center ">
+        <section class="vh-100  image"
+  style="background-image: url('../assets/Images/catupdate.jpg');">
+  <div class="mask  h-70 ">
+ 
+    <h1><i>Update Mobile Category Here</i></h1><br><br>
+
+    <form #updateForm="ngForm" (ngSubmit)="updateCategory(updateForm.value)" >
+    <label class="form-label"><b>CategoryId:</b></label>
+    <input type="text" ngModel name="pcId" #pcId="ngModel" required class="form-label form-control-lg"> <br><br>
+    <label class="form-label"><b>CategoryName:</b></label>
+    <input type="text" ngModel name="pcName" #pName="ngModel"  required class="form-label form-control-lg"><br><br>
+
+  
+    
+    
+    
+    <button type="submit"  class="btn btn-md update" >Update Category</button><br><br>
+    <div><u><i routerLink="/categorytable">  Back to category details</i> </u></div>
+</form>
+
+</div></section>
